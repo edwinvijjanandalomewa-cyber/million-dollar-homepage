@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Place your ad on RuangPixel." />
+    <title>RuangPixel — Place Your Ad</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="RuangPixel">
+        <span class="brand-mark" aria-hidden="true">▦</span>
+        <span>ruang<span class="brand-accent">pixel</span></span>
+      </a>
+      <span class="header-price">Rp20,000 / square</span>
+    </header>
+
+    <main>
+      <section class="workspace" aria-label="Ad board">
+        <div class="board-panel">
+          <div class="panel-heading">
+            <div>
+              <h1 id="page-title">Ad board</h1>
+            </div>
+            <span class="board-size">10,000 squares</span>
+          </div>
+
+          <div class="board-scroll">
+            <div
+              id="pixel-board"
+              class="pixel-board"
+              role="group"
+              aria-label="Mosaic ad board. Click an empty square to select it."
+            ></div>
+          </div>
+        </div>
+
+        <aside class="booking-card" aria-label="Select squares and place an ad">
+          <div class="selection-summary" aria-live="polite">
+            <span><span id="selected-count">0</span> squares selected</span>
+            <strong id="total-price">Rp0</strong>
+          </div>
+
+          <form id="ad-form">
+            <input
+              id="ad-name"
+              name="ad-name"
+              type="text"
+              maxlength="60"
+              placeholder="Business name"
+              aria-label="Business name"
+              required
+            />
+            <input
+              id="ad-url"
+              name="ad-url"
+              type="text"
+              inputmode="url"
+              placeholder="Website link (example.com)"
+              aria-label="Website link"
+              required
+            />
+            <input
+              id="ad-image"
+              name="ad-image"
+              type="file"
+              accept="image/*"
+              aria-label="Choose an ad image"
+              required
+            />
+            <button id="submit-ad" class="submit-button" type="submit">
+              Place ad
+            </button>
+          </form>
+
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Rp20,000 per square · Demo ads are saved in this browser</span>
+    </footer>
+  </body>
+</html>
